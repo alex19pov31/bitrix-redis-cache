@@ -1,0 +1,26 @@
+{
+    "name": "alex19pov31/bitrix-redis-cache",
+    "description": "Bitrix redis cache engine",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "bitrix",
+        "redis",
+        "cache"
+    ],
+    "authors": [
+        {
+            "name": "Nesterov Alexander",
+            "email": "alex19pov31@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Alex19pov31\\BitrixRedisCache\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "predis/predis": "^1.1"
+    }
+}
