@@ -1,3 +1,5 @@
+[![Latest Stable Version](https://poser.pugx.org/alex19pov31/bitrix-redis-cache/v/stable)](https://packagist.org/packages/alex19pov31/bitrix-redis-cache)
+
 # Bitrix Redis cache
 
 Кеширование данных посредством Redis.
@@ -29,7 +31,7 @@ return [
 ];
 ```
 
-Подробней о параметрах подключения пожно прочитать тут - https://github.com/nrk/predis/wiki/Connection-Parameters
+Подробней о параметрах подключения можно прочитать тут - https://github.com/nrk/predis/wiki/Connection-Parameters
 
 ## Использование
 
