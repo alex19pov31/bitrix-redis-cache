@@ -33,6 +33,7 @@ return [
 ];
 ```
 
+Автолоадер надо подключать в /bitrix/dbconn.php
 Подробней о параметрах подключения можно прочитать тут - https://github.com/nrk/predis/wiki/Connection-Parameters
 
 ## Использование

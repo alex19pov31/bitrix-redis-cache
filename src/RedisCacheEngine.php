@@ -46,14 +46,16 @@ class RedisCacheEngine implements ICacheEngine, ICacheEngineStat
     public function clean($baseDir, $initDir = false, $filename = false)
     {
         $key = $this->getKey($baseDir, $initDir, $filename);
-        if ($filename) {
+        if ($filename && !empty($key)) {
             $this->getClient()->del($key);
             return;
         }
 
         $key += '*';
         $keyList = $this->getClient()->keys($key);
-        $this->getClient()->del($keyList);
+        if (!empty($keyList)) {
+            $this->getClient()->del($keyList);
+        }
     }
 
     public function read(&$arAllVars, $baseDir, $initDir, $filename, $TTL)
@@ -78,7 +80,7 @@ class RedisCacheEngine implements ICacheEngine, ICacheEngineStat
 
     private function getKey($baseDir, $initDir, $filename): string
     {
-        return (string) $initDir . ":" . $baseDir . ":" . $filename;
+        return (string) $baseDir . ":" . $initDir . ":" . $filename;
     }
 
     public function isCacheExpired($path)
