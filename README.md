@@ -19,7 +19,9 @@ composer require alex19pov31/bitrix-redis-cache
 return [
   'cache' => [
     'value' => [
-      'type' => 'redis',
+      'type' => [
+          'class_name' => 'Alex19pov31\BitrixRedisCache\RedisCacheEngine'
+        ],
       'redis' => [
         'scheme' => 'tcp',
         'host' => '127.0.0.1',

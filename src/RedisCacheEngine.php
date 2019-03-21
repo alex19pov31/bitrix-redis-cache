@@ -22,8 +22,7 @@ class RedisCacheEngine implements ICacheEngine, ICacheEngineStat
     public function __construct($options = null)
     {
         $cacheConfig = Configuration::getValue("cache");
-        if (is_null($options) && isset($cacheConfig["type"]) &&
-            $cacheConfig['type'] == 'redis' && isset($cacheConfig["redis"])) {
+        if (is_null($options) && isset($cacheConfig["redis"])) {
             $options = $cacheConfig["redis"];
         }
 
