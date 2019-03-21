@@ -20,7 +20,7 @@ return [
   'cache' => [
     'value' => [
       'type' => [
-          'class_name' => 'Alex19pov31\BitrixRedisCache\RedisCacheEngine'
+          'class_name' => 'Alex19pov31\BitrixRedisCache\RedisCacheEngine',
         ],
       'redis' => [
         'scheme' => 'tcp',
